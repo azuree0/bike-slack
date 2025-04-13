@@ -1,0 +1,33 @@
+<div class="custom-heading">
+    <h2>{{ section.settings.heading_text }}</h2>
+  </div>
+
+{% schema %}
+    {
+      "name": "Custom Heading",
+      "tag": "section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading_text",
+          "label": "Heading Text",
+          "default": "Welcome to Our Store"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Custom Heading",
+          "category": "Custom"
+        }
+      ]
+    }
+    {% endschema %}
+    
+    <style>
+      .custom-heading-section h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin: 20px 0;
+      }
+    </style>
+    
