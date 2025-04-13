@@ -15,7 +15,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "FIND YOUR PERFECT RIDE TODAY",
+            "heading": "FIND YOUR PERFECT RIDE TODAY.",
             "heading_size": "h1"
           }
         },
@@ -329,13 +329,6 @@
         "padding_bottom": 36
       }
     },
-    "custom_liquid_4Q3aaQ": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "Thank you for visting!",
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 16
       }
     }
   },
@@ -348,6 +341,5 @@
     "multicolumn_QzYWQM",
     "featured_collection_6frfxg",
     "featured_blog_br3dte",
-    "custom_liquid_4Q3aaQ"
   ]
 }
