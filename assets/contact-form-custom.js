@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (businessCheckbox && companyInfoDiv) {
         businessCheckbox.addEventListener('change', (e) => {
-            \            companyInfoDiv.classList.toggle('hidden', !businessCheckbox.checked);
+            console.log("checkbox changed", businessCheckbox.checked);
+            companyInfoDiv.classList.toggle('hidden', !businessCheckbox.checked);
         });
     } else {
         console.warn('Missing elements: businessCheckbox or companyInfoDiv');
@@ -15,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (contactReason && productNameDiv && orderNumberDiv) {
         contactReason.addEventListener('change', (e) => {
-            \            productNameDiv.classList.add('hidden');
+            console.log("contact reason changed", contactReason.value);
+            productNameDiv.classList.add('hidden');
             orderNumberDiv.classList.add('hidden');
 
             if (contactReason.value === 'product') {
