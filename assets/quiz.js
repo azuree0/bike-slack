@@ -6,12 +6,9 @@ const answers = {};
 quiz_form.addEventListener("change", updateAnswers);
 function updateAnswers(event) {
   //code to store answers
-
-
-
-  console.log("answers: ", answers);
+  let input = event.target;
+  answers[input.name] = input.value;
 }
-
 
 finish_btn.addEventListener("click", function () {
   if (answers.product_type && answers.bike_type && answers.color) {
