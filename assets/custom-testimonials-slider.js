@@ -1,19 +1,14 @@
-// initialize slideshow
+const carosuels = document.querySelectorAll('.testimonial-slider');
+  
+carosuels.forEach(elem => {
 
-const slider_html = document.querySelector('.testimonial-slider');
-
-const slider = new Flickity(slider_html,{
-    pageDots: false,
-    autoPlay: false,
-    wrapAround: true,
-    cellAlign: 'left',
-    pauseAutoPlayOnHover: false
-});
-
-// config:
-// assume there is just one single slider on the page
-// navigation dots should be disabled
-// no autoplay
-// infinite loop
-// the slides or cells should be aligned to the left side on initialization.
-// pauseAutoPlayOnHover: false
+    let autoPlayInterval = Number(elem.dataset.autoplay);        
+        
+    new Flickity(elem,{
+        pageDots: false,
+        autoPlay: autoPlayInterval,
+        wrapAround: true,
+        cellAlign: 'left',
+        pauseAutoPlayOnHover: false
+      });
+  });

@@ -2,7 +2,7 @@
 {{- 'flickity.css' | asset_url | stylesheet_tag -}}
 {{- 'flickity.pkgd.min.js' | asset_url | script_tag -}}
 {{- 'custom-testimonials-slider.css' | asset_url | stylesheet_tag -}}
-<script src="{{ 'custom-testimonials-slider.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'custom-testimonials-slider.js' | asset_url }}" type="module" defer="defer"></script>
 
 {%- style -%}
   .custom-testimonials-{{ section.id }} {
@@ -40,17 +40,16 @@
      
 
       {%comment%} hardcoded slides for testing {%endcomment%}
+      {% for block in section.blocks %}
+
       <div class="testimonial-slide">
         <div class="content-container">
           <div class="multicolumn-card__info">
-            <h3 class="inline-richtext">Road bike TEST</h3>
+            <h3 class="inline-richtext">{{block.settings.title}}</h3>
             <div class="rte">
             
               <p>
-              TEST 1
-                I recently bought a road bike from Bike Shack and I'm absolutely in love with it! The staff were incredibly
-                helpful, guiding me to the perfect bike for my needs. It rides like a dream, and I've been able to hit all my
-                fitness goals. Thanks, Bike Shack, for such a fantastic experience!
+              {{block.settings.text}}  
               </p>
             
             </div>
@@ -58,153 +57,33 @@
           <div class="profile-block">
             <div class="profile-img">
 
-              <img src="//master-js-course.myshopify.com/cdn/shop/files/woman-1.jpg?v=1713560490&amp;width=48" alt=""
-                srcset="//master-js-course.myshopify.com/cdn/shop/files/woman-1.jpg?v=1713560490&amp;width=48 48w" width="48"
-                height="48" loading="lazy" class="profile-image">
+            {{block.settings.image | image_url: width: 75 | image_tag:class: 'profile-image'}} 
 
             </div>
             <div class="title-wrap">
               <p class="name">
-                Sophia (TEST 1)
+                {{block.settings.name}}
               </p>
               <div class="star-rating">
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
 
+              {% assign full_stars = block.settings.star_rating | floor %}
+
+              {% for i in (1..full_stars) %}
+                {% include 'icon-star-full' %}
+              {% endfor %}
+
+              {% assign half_stars = block.settings.star_ratng | modulo: 1 %}
+
+              {% unless half_star == 0 %}
                 {% include 'icon-star-half' %}
+              {% endunless %}  
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {%comment%} hardcoded slide #2{%endcomment%}
-      <div class="testimonial-slide">
-        <div class="content-container">
-          <div class="multicolumn-card__info">
-            <h3 class="inline-richtext">Mountain Bike TEST</h3>
-            <div class="rte">
-            
-              <p>
-              TEST 2
-                I recently bought a road bike from Bike Shack and I'm absolutely in love with it! The staff were incredibly
-                helpful, guiding me to the perfect bike for my needs. It rides like a dream, and I've been able to hit all my
-                fitness goals. Thanks, Bike Shack, for such a fantastic experience!
-              </p>
-            
-            </div>
-          </div>
-          <div class="profile-block">
-            <div class="profile-img">
-
-              <img src="//master-js-course.myshopify.com/cdn/shop/files/man-1.jpg?v=1713560489&width=48" alt=""
-                srcset="//master-js-course.myshopify.com/cdn/shop/files/man-1.jpg?v=1713560489&width=48 48w" width="48"
-                height="48" loading="lazy" class="profile-image">
-
-            </div>
-            <div class="title-wrap">
-              <p class="name">
-                JOHN (TEST 2)
-              </p>
-              <div class="star-rating">
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-
-        
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    {%comment%} hardcoded slide #3{%endcomment%}
-      <div class="testimonial-slide">
-        <div class="content-container">
-          <div class="multicolumn-card__info">
-            <h3 class="inline-richtext">THIRD BIKE TEST</h3>
-            <div class="rte">
-            
-              <p>
-              TEST 3
-                I recently bought a road bike from Bike Shack and I'm absolutely in love with it! The staff were incredibly
-                helpful, guiding me to the perfect bike for my needs. It rides like a dream, and I've been able to hit all my
-                fitness goals. Thanks, Bike Shack, for such a fantastic experience!
-              </p>
-            
-            </div>
-          </div>
-          <div class="profile-block">
-            <div class="profile-img">
-
-              <img src="//master-js-course.myshopify.com/cdn/shop/files/woman-1.jpg?v=1713560490&amp;width=48" alt=""
-                srcset="//master-js-course.myshopify.com/cdn/shop/files/woman-1.jpg?v=1713560490&amp;width=48 48w" width="48"
-                height="48" loading="lazy" class="profile-image">
-
-            </div>
-            <div class="title-wrap">
-              <p class="name">
-                Lisa (TEST 3)
-              </p>
-              <div class="star-rating">
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-    {%comment%} hardcoded slide #4{%endcomment%}
-      <div class="testimonial-slide">
-        <div class="content-container">
-          <div class="multicolumn-card__info">
-            <h3 class="inline-richtext">Another Bike</h3>
-            <div class="rte">
-            
-              <p>
-              TEST 4
-                I recently bought a road bike from Bike Shack and I'm absolutely in love with it! The staff were incredibly
-                helpful, guiding me to the perfect bike for my needs. It rides like a dream, and I've been able to hit all my
-                fitness goals. Thanks, Bike Shack, for such a fantastic experience!
-              </p>
-            
-            </div>
-          </div>
-          <div class="profile-block">
-            <div class="profile-img">
-
-              <img src="//master-js-course.myshopify.com/cdn/shop/files/woman-1.jpg?v=1713560490&amp;width=48" alt=""
-                srcset="//master-js-course.myshopify.com/cdn/shop/files/woman-1.jpg?v=1713560490&amp;width=48 48w" width="48"
-                height="48" loading="lazy" class="profile-image">
-
-            </div>
-            <div class="title-wrap">
-              <p class="name">
-                Anna (TEST 4)
-              </p>
-              <div class="star-rating">
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-                {% include 'icon-star-full' %}
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {%comment%} END hardcoded slides for testing {%endcomment%}
+      {% endfor %}
 
     </div>
     
