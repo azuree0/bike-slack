@@ -1132,8 +1132,18 @@ class VariantSelects extends HTMLElement {
       this.renderProductInfo();
       this.updateShareUrl();
     }
-  
-  }
+    
+      // Dispatch the afterVariantChange event with the new variant
+      document.dispatchEvent(
+        new CustomEvent("afterVariantChange", {
+          detail: {
+            newVariant: this.currentVariant,
+          },
+          bubbles: true,
+          cancelable: true,
+        })
+      );
+    }
 
   updateOptions() {
     this.options = Array.from(

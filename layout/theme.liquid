@@ -350,16 +350,18 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     
-    {% if template == 'product' %}
-      <script>
-          document.addEventListener('afterVariantChange', handleVariantChange)
+    {% comment %}
+      {% if template == 'product' %}
+        <script>
+            document.addEventListener('afterVariantChange', handleVariantChange)
 
-          function handleVariantChange(event){
-            console.log('New variant:', event.detail.newVariant)
-          }
-          
-      </script>
-    {% endif %}
+            function handleVariantChange(event){
+              console.log('New variant:', event.detail.newVariant)
+            }
+            
+        </script>
+      {% endif %}
+    {% comment %}
 
   </body>
 </html>
