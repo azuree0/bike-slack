@@ -299,12 +299,36 @@
                   const breaksTxt = document.querySelector('#meta-information-breaks');
 
                   function updateUI(variantOption) {
-
+                    if (variantMetaData[variantOption]) {
+                      const variant = variantMetaData[variantOption];
+                      weightTxt.textContent = variant.weight || 'N/A';
+                      rangeTxt.textContent = variant.range || 'N/A';
+                      speedTxt.textContent = variant.speed || 'N/A';
+                      batteryTxt.textContent = variant.battery || 'N/A';
+                      breaksTxt.textContent = variant.breaks || 'N/A';
+                    } else {
+                      weightTxt.textContent = 'N/A';
+                      rangeTxt.textContent = 'N/A';
+                      speedTxt.textContent = 'N/A';
+                      batteryTxt.textContent = 'N/A';
+                      breaksTxt.textContent = 'N/A';
+                    }
                   }
+
+                  document.addEventListener('DOMContentLoaded', () => {
+                    const metaTable = document.querySelector('#meta-information-table');
+                    const initialVariant = metaTable.dataset.initialvariantoption || 'Regular';
+                    updateUI(initialVariant);
+                  });
+
+                  document.addEventListener('change', (event) => {
+                    if (event.target.matches('input[name="options[Variant]"], select[name="options[Variant]"]')) {
+                      const selectedVariant = event.target.value;
+                      updateUI(selectedVariant);
+                    }
+                  });
+                </script>
                   //subscribe to variant changes and update UI based on new selection
-                  //...
-
-
 
                   //initialize on pageload
                   const initialVariantOption = document.querySelector('#meta-information-table').dataset.initialvariantoption;
@@ -1096,7 +1120,7 @@
     {
       "type":"meta-information",
       "name":"Meta Information",
-      "limit":1,
+      "limit":1
     },
     {
       "type": "collapsible_tab",

@@ -57,13 +57,7 @@
         "padding_bottom": 0
       }
     },
-    "countdown_kT4AmX": {
-      "type": "countdown",
-      "settings": {
-        "text": "Spring Sale! Save up to 20%",
-        "final_date": "2026-05-25T16:37:52-04:00"
-      }
-    },
+    
     "featured_collection": {
       "type": "featured-collection",
       "custom_css": [
