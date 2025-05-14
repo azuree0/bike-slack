@@ -4,7 +4,8 @@ class AvailabilityStatus extends HTMLElement {
 
     //Initial values
     this.selectedLocation = "New York";
-    this.selectedVariantColor =  "Navy Blue"
+    this.selectedVariantColor = this.dataset.initialvariant;
+    console.log("Initial variant color:", this.selectedVariantColor);
     this.selectedVariantStockData = null;
 
     //UI Elements
@@ -27,12 +28,13 @@ class AvailabilityStatus extends HTMLElement {
     );
 
     //initialize! 
-    
+    this.updateAvailability();
   }
 
   handleVariantChange(event) {
     /* update  this.selectedVariantColor based on the Shopify variant change-event */
-   
+    const newColor = event.detail.newVariant.option1;
+    this.selectedVariantColor = newColor;
     this.updateAvailability();
   }
 
@@ -67,7 +69,7 @@ class AvailabilityStatus extends HTMLElement {
 
   }
 
-
+  
   updateUI() { 
     if (!this.selectedVariantStockData) return;
     

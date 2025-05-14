@@ -110,7 +110,7 @@
         "button_D4B3Hx": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now",
+            "button_label": "",
             "button_link": "shopify://collections/all",
             "button_style_secondary": false
           }
@@ -166,7 +166,7 @@
         "button_zrDCjt": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now",
+            "button_label": "",
             "button_link": "shopify://collections/all",
             "button_style_secondary": false
           }
@@ -330,10 +330,10 @@
         "padding_bottom": 36
       }
     },
-    "custom_testimonials_slider_Wq46eX": {
+    "custom_testimonials_slider_wEEfnQ": {
       "type": "custom-testimonials-slider",
       "blocks": {
-        "column_XbhQjX": {
+        "column_UFYbKh": {
           "type": "column",
           "settings": {
             "title": "Road bike",
@@ -343,7 +343,7 @@
             "star_rating": 5
           }
         },
-        "column_Xcqx43": {
+        "column_mmTjxL": {
           "type": "column",
           "settings": {
             "title": "Hybrid bike",
@@ -353,7 +353,7 @@
             "star_rating": 5
           }
         },
-        "column_TJxxd3": {
+        "column_RkLFUT": {
           "type": "column",
           "settings": {
             "title": "Mountain bike",
@@ -363,22 +363,44 @@
             "star_rating": 3.5
           }
         },
-        "column_6NzrmA": {
+        "column_q9rxhy": {
+          "type": "column",
+          "settings": {
+            "title": "Hybrid bike",
+            "text": "<p>I picked up a hybrid bike from Bike Shack last month, and it's been awesome. It's super versatile—great for both my daily commute and some fun on the trails. The quality is top-notch and the price was right. Definitely recommending Bike Shack to all my friends!</p>",
+            "image": "shopify://shop_images/man-2.jpg",
+            "name": "Ethan",
+            "star_rating": 5
+          }
+        },
+        "column_GyNwGa": {
           "type": "column",
           "settings": {
             "title": "Road bike",
             "text": "<p>I recently bought a road bike from Bike Shack and I'm absolutely in love with it! The staff were incredibly helpful, guiding me to the perfect bike for my needs. It rides like a dream, and I've been able to hit all my fitness goals. Thanks, Bike Shack, for such a fantastic experience!</p>",
             "image": "shopify://shop_images/woman-3.jpg",
-            "name": "Marketing Manager",
+            "name": "Marketing Manage",
             "star_rating": 4.5
+          }
+        },
+        "column_aPaxqT": {
+          "type": "column",
+          "settings": {
+            "title": "Hybrid bike",
+            "text": "<p>I picked up a hybrid bike from Bike Shack last month, and it's been awesome. It's super versatile—great for both my daily commute and some fun on the trails. The quality is top-notch and the price was right. Definitely recommending Bike Shack to all my friends!</p>",
+            "image": "shopify://shop_images/man-3.jpg",
+            "name": "Ethan",
+            "star_rating": 5
           }
         }
       },
       "block_order": [
-        "column_XbhQjX",
-        "column_Xcqx43",
-        "column_TJxxd3",
-        "column_6NzrmA"
+        "column_UFYbKh",
+        "column_mmTjxL",
+        "column_RkLFUT",
+        "column_q9rxhy",
+        "column_GyNwGa",
+        "column_aPaxqT"
       ],
       "name": "Custom testimonial slider",
       "settings": {
@@ -390,11 +412,18 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "countdown_kGdw3D": {
+      "type": "countdown",
+      "name": "Countdown",
+      "settings": {
+        "text": "Spring Sale! Save up to 20%",
+        "final_date": "May 25, 2026 16:37:52 EST"
+      }
     }
   },
   "order": [
     "image-with-text",
-    "countdown_kT4AmX",
     "featured_collection",
     "image_with_text_7GrjRn",
     "image_with_text_e7KBW4",
@@ -402,6 +431,7 @@
     "multicolumn_QzYWQM",
     "featured_collection_6frfxg",
     "featured_blog_br3dte",
-    "custom_testimonials_slider_Wq46eX"
+    "custom_testimonials_slider_wEEfnQ",
+    "countdown_kGdw3D"
   ]
 }

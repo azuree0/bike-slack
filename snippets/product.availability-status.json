@@ -1,20 +1,12 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "main-product-availability-status",
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+          }
         },
         "vendor": {
           "type": "text",
@@ -25,11 +17,13 @@
         },
         "product-rating": {
           "type": "rating",
-          "settings": {}
+          "settings": {
+          }
         },
         "price": {
           "type": "price",
-          "settings": {}
+          "settings": {
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -40,7 +34,8 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {}
+          "settings": {
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -51,13 +46,19 @@
         },
         "description": {
           "type": "description",
-          "settings": {}
+          "settings": {
+          }
         },
         "share": {
           "type": "share",
           "disabled": true,
           "settings": {
             "share_label": "Share"
+          }
+        },
+        "availability_status_Mnmc7J": {
+          "type": "availability-status",
+          "settings": {
           }
         },
         "icon_with_text_VrMPVY": {
@@ -83,6 +84,7 @@
         "buy_buttons",
         "description",
         "share",
+        "availability_status_Mnmc7J",
         "icon_with_text_VrMPVY"
       ],
       "settings": {
@@ -107,19 +109,19 @@
         "image_np6cpE": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1._bike_front_view.webp"
+            "image": "shopify:\/\/shop_images\/collage_1.jpg"
           }
         },
         "image_jXzY8e": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2._bike_close_up.webp"
+            "image": "shopify:\/\/shop_images\/collage_2.jpg"
           }
         },
         "image_Ac9GfX": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/3._bike_riding.webp"
+            "image": "shopify:\/\/shop_images\/collage_3.jpg"
           }
         }
       },
@@ -147,7 +149,7 @@
           "settings": {
             "heading": "What safety gear do I need for mountain biking?",
             "icon": "check_mark",
-            "row_content": "<p>Ride in Style and Confidence with Premium Protective Equipment for Mountain Biking.</p>",
+            "row_content": "<p>Ride in Style and Confidence with Premium Protective Equipment for Mountain Biking.<\/p>",
             "page": ""
           }
         },
@@ -156,7 +158,7 @@
           "settings": {
             "heading": "How often should I maintain my mountain bike?",
             "icon": "check_mark",
-            "row_content": "<p>Fine-tune to Perfection: Keep Your Mountain Bike in Prime Condition.</p>",
+            "row_content": "<p>Fine-tune to Perfection: Keep Your Mountain Bike in Prime Condition.<\/p>",
             "page": ""
           }
         },
@@ -165,7 +167,7 @@
           "settings": {
             "heading": "Do I need any special tools to assemble my mountain bike?",
             "icon": "check_mark",
-            "row_content": "<p>Assemble your mountain bike like a master craftsman with our premium toolkit selection.</p>",
+            "row_content": "<p>Assemble your mountain bike like a master craftsman with our premium toolkit selection.<\/p>",
             "page": ""
           }
         }

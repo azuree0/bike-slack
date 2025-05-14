@@ -2,6 +2,7 @@
 <script src="{{ 'availability-status-element.js' | asset_url }}" defer="defer"></script>
 
 <availability-status class="availability-status">
+data-initialvariant="{{product.selected_or_first_available_variant.option1}}">
     <div class="heading">
         <span class="strong">Status</span>
         <div id="change-location-btn" class="underlined-btn">Change Location</div>
