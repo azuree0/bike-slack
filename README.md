@@ -1,4 +1,4 @@
-Liquid (2006, Shopify JavaScript framework, template for e commerce, website theme.)
+
 
 ![Screenshot 2025-06-15 180729](https://github.com/user-attachments/assets/f4f36ae7-a78a-44fa-ab51-557dfe336f56)
 
